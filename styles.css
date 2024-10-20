@@ -1,0 +1,58 @@
+body {
+    background-image: url('vending_m.png'); /* Reference the image in the same folder */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    backdrop-filter: brightness(0.3); /* Adjust brightness for better text visibility */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    backdrop-filter: brightness(0.8); /* Ensure header text is visible */
+}
+
+h1 {
+    color: #FF1493; /* LED pink */
+    font-size: 3rem;
+}
+
+.vending-machine {
+    display: flex;
+    justify-content: center;
+}
+
+.machine-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-gap: 10px;
+}
+
+.machine-slot {
+    background-color: #000;
+    color: #FF1493; /* LED pink */
+    text-align: center;
+    padding: 20px;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.machine-slot:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
