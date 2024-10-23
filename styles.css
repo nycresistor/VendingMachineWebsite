@@ -14,51 +14,63 @@ body {
     height: 100vh;
     backdrop-filter: brightness(0.3); /* Adjust brightness for better text visibility */
 }
+
 /* Add mobile-specific styles */
+
 @media only screen and (max-width: 768px) {
     body {
         height: auto; /* Remove fixed height for mobile devices */
     }
+
     .machine-grid {
         grid-template-columns: repeat(3, 100px); /* Reduce number of columns for smaller screens */
         grid-gap: 5px; /* Reduce gap between elements for smaller screens */
     }
+
     .machine-slot {
         padding: 10px; /* Reduce padding for smaller screens */
         font-size: 1.2rem; /* Reduce font size for smaller screens */
     }
 }
+
 header {
     text-align: center;
     margin-bottom: 20px;
     backdrop-filter: brightness(0.8); /* Ensure header text is visible */
 }
+
 h1 {
     color: #FF1493; /* LED pink */
     font-size: 3rem;
 }
+
 .vending-machine {
     display: flex;
     justify-content: center;
 }
+
 .machine-grid {
+    max-width: 90%; /* Set a maximum width for the grid */
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr 1fr));
     grid-gap: 10px;
 }
 .machine-slot {
     background-color: #000;
     color: #FF1493; /* LED pink */
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     border-radius: 2px;
     font-size: 1.5rem;
     text-decoration: none;
     transition: transform 0.3s;
 }
+
 .machine-slot:hover {
     transform: scale(1.1);
 }
+
 footer {
     margin-top: 20px;
-    
+    font-size: 1.2rem;
+}
