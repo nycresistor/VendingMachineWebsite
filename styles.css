@@ -1,76 +1,66 @@
 body {
-    background-image: url('vending_m.png'); /* Reference the image in the same folder */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    backdrop-filter: brightness(0.3); /* Adjust brightness for better text visibility */
-}
-
-/* Add mobile-specific styles */
-
-@media only screen and (max-width: 768px) {
-    body {
-        height: auto; /* Remove fixed height for mobile devices */
-    }
-
-    .machine-grid {
-        grid-template-columns: repeat(3, 100px); /* Reduce number of columns for smaller screens */
-        grid-gap: 5px; /* Reduce gap between elements for smaller screens */
-    }
-
-    .machine-slot {
-        padding: 10px; /* Reduce padding for smaller screens */
-        font-size: 1.2rem; /* Reduce font size for smaller screens */
-    }
-}
-
-header {
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
-    backdrop-filter: brightness(0.8); /* Ensure header text is visible */
-}
-
-h1 {
-    color: #FF1493; /* LED pink */
-    font-size: 3rem;
-}
-
-.vending-machine {
+  }
+  
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  main {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-.machine-grid {
-    max-width: 90%; /* Set a maximum width for the grid */
+  }
+  
+  .machine-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 10px;
-}
-.machine-slot {
+  }
+  
+  .machine-slot {
     background-color: #000;
     color: #FF1493; /* LED pink */
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     border-radius: 2px;
     font-size: 1.5rem;
     text-decoration: none;
     transition: transform 0.3s;
-}
-
-.machine-slot:hover {
+  }
+  
+  .machine-slot:hover {
     transform: scale(1.1);
-}
-
-footer {
-    margin-top: 20px;
-    font-size: 1.2rem;
-}
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+  }
+  
+  /* Media queries for responsiveness */
+  
+  @media only screen and (max-width: 768px) {
+    .machine-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .machine-grid {
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+  }
