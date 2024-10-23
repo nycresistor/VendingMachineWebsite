@@ -18,13 +18,13 @@ header h1 {
 
 main {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
 }
 
 .machine-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(50px, 100px));
+    grid-template-columns: repeat(4, minmax(50px, 100px));
     grid-gap: 10px;
     max-width: 600px; /* Adjust as needed */
     width: 100%;
@@ -55,8 +55,8 @@ footer {
 
 /* Media queries for responsiveness */
 
-@media only screen {
+@media only screen and (max-width: 600px) {
     .machine-grid {
-        grid-template-columns: repeat(4, minmax(50px, 100px));
+        grid-template-columns: repeat(3, minmax(50px, 100px));
     }
 }
