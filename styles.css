@@ -24,8 +24,10 @@ main {
 
 .machine-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(4, 100px);
     grid-gap: 10px;
+    max-width: 600px; /* Adjust as needed */
+    width: 100%;
 }
 
 .machine-slot {
@@ -53,24 +55,8 @@ footer {
 
 /* Media queries for responsiveness */
 
-@media only screen and (max-width: 768px) {
-    .machine-grid {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .machine-grid {
-        grid-template-columns: repeat(2, minmax(50px, 1fr));
-    }
-    .machine-slot {
-        padding: 10px;
-        font-size: 1rem;
-    }
-}
-
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
     .machine-grid {
-        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        grid-template-columns: repeat(3, minmax(50px, 100px));
     }
 }
