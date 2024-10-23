@@ -2,33 +2,33 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  header {
+}
+
+header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
-  }
-  
-  header h1 {
+}
+
+header h1 {
     font-size: 24px;
     margin: 0;
-  }
-  
-  main {
+}
+
+main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  .machine-grid {
+}
+
+.machine-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
     grid-gap: 10px;
-  }
-  
-  .machine-slot {
+}
+
+.machine-slot {
     background-color: #000;
     color: #FF1493; /* LED pink */
     text-align: center;
@@ -37,30 +37,40 @@ body {
     font-size: 1.5rem;
     text-decoration: none;
     transition: transform 0.3s;
-  }
-  
-  .machine-slot:hover {
-    transform: scale(1.1);
-  }
-  
-  footer {
+}
+
+.machine-slot:hover {
+    transform: scale(1.5);
+}
+
+footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
     clear: both;
-  }
-  
-  /* Media queries for responsiveness */
-  
-  @media only screen and (max-width: 768px) {
+}
+
+/* Media queries for responsiveness */
+
+@media only screen and (max-width: 768px) {
     .machine-grid {
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     }
-  }
-  
-  @media only screen and (max-width: 480px) {
+}
+
+@media only screen and (max-width: 480px) {
     .machine-grid {
-      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+        grid-template-columns: repeat(2, minmax(50px, 1fr));
     }
-  }
+    .machine-slot {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .machine-grid {
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+}
