@@ -1,62 +1,74 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto Mono', monospace; /* Futuristic font */
     margin: 0;
     padding: 0;
+    background: url('vending_m.png') center/cover no-repeat fixed; /* Replace with actual image URL */
+    color: #e0e0e0; /* Light gray text for contrast */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #222831; /* Dark futuristic shade */
+    color: #00adb5; /* Neon teal */
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 2rem;
     margin: 0;
 }
 
 main {
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* Centers the grid vertically */
     padding: 20px;
 }
 
 .machine-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(50px, 100px));
-    grid-gap: 10px;
-    max-width: 600px; /* Adjust as needed */
+    grid-template-columns: repeat(4, minmax(20px, 1fr)); /* Increased minimum width */
+    grid-auto-rows: 1fr; /* Ensures square buttons */
+    grid-gap: 25px; /* Slightly larger gap between buttons */
+    max-width: 90vw; /* Responsive max width */
     width: 100%;
+    place-items: center;
 }
 
 .machine-slot {
-    background-color: #000;
-    color: #FF1493; /* LED pink */
-    text-align: center;
+    background-color: #393e46; /* Dark gray */
+    color: #ff2e63; /* Neon pink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem; /* Larger font size */
     padding: 20px;
-    border-radius: 2px;
-    font-size: 1.5rem;
     text-decoration: none;
-    transition: transform 0.3s;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    aspect-ratio: 1 / 1; /* Ensures square buttons */
 }
 
 .machine-slot:hover {
-    transform: scale(1.5);
+    transform: scale(1.1);
+    background-color: #00adb5; /* Neon teal hover */
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #222831;
+    color: #00adb5;
     padding: 20px;
     text-align: center;
-    clear: both;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Media queries for responsiveness */
+/* Media query for small screens */
 
 @media only screen and (max-width: 600px) {
     .machine-grid {
-        grid-template-columns: repeat(3, minmax(50px, 100px));
+        grid-template-columns: repeat(2, minmax(50px, 1fr)); /* Larger buttons on small screens too */
     }
 }
