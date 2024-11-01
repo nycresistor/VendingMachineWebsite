@@ -6,6 +6,13 @@ body {
     color: #e0e0e0; /* Light gray text for contrast */
 }
 
+p {
+    background-color: #1a1a1a; /* Darker background for paragraphs */
+    color: #e0e0e0; /* Maintain light gray text for readability */
+    padding: 10px;
+    border-radius: 5px;
+}
+
 header {
     background-color: #222831; /* Dark futuristic shade */
     color: #00adb5; /* Neon teal */
